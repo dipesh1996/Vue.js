@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>My first Vue app</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+
+  <body>
+    <div id="app-6" v-bind:title="message1">
+      <form>Enter Your text to reverse :: <input v-model="message"></form>
+      <br/>
+        <button v-on:click="reverseMessage" >Reverse Message</button>
+    </div>
+    <div id="app-7">
+      <dt>List Item: </dt>
+      <dl>
+        <todo-item
+          v-for="item in groceryList"
+          v-bind:todo="item"
+          v-bind:key="item.id"
+        ></todo-item>
+      </dl>
+    </div>
+
+  </body>
+  <script src="index.js"></script>
+
+</html>
